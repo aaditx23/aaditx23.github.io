@@ -24,6 +24,33 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <style>
+    .animated-gradient-text-project {
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(to right, #040b14, #149ddd, #173b6c);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 60px;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -45,32 +72,11 @@
   <header id="header">
     <div class="d-flex flex-column">
 
-      <div class="profile text-center">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a>Md. Amir Ul Islam</a></h1>
-        
-        <!-- Undergrad & BRAC University -->
-        <p class="text-light mb-1" style="font-size: 0.9rem;">Undergraduate Student</p>
-        <p class="text-light" style="font-size: 0.9rem;">BRAC University</p>
-        
-        <!-- Contact Info with Icons (Email & Phone) -->
-        <p class="text-light mb-1" style="font-size: 0.8rem;">
-          <a href="mailto:adit.pranto@gmail.com" class="text-light"><i class="bx bx-mail-send"></i> adit.pranto@gmail.com</a>
-        </p>
-        <p class="text-light" style="font-size: 0.8rem;">
-          <a href="tel:+8801761443869" class="text-light"><i class="bx bx-phone"></i> +8801761443869</a>
-        </p>
-
-        <!-- Social Links -->
-        <div class="social-links mt-3">
-          <a href="https://www.facebook.com/azazel.x369" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://github.com/aaditx23" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/aaditx23/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
+      
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
+          <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#resume" class="nav-link scrollto active"><i class="bx bxs-graduation"></i> <span>Education</span></a></li>
           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-brain"></i> <span>Skills</span></a></li>
           <li><a href="#projects" class="nav-link scrollto"><i class="bx bxs-cog"></i> <span>Projects</span></a></li>
@@ -79,6 +85,31 @@
       </nav>
     </div>
 </header>
+
+<section id="home" class="d-flex flex-column align-items-center text-dark py-5">
+  <div class="profile text-center">
+      <!-- Profile Image (200px, circle) -->
+      <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+
+      <!-- Name -->
+      <h1 class="animated-gradient-text-project" style="font-size: 2rem; margin-top: 10px;"><strong><b>Md. Amir Ul Islam</b></strong></h1>
+      
+      <!-- Undergrad & BRAC University -->
+      <p class="mb-1" style="font-size: 1rem;">Undergraduate Student</p>
+      <p class="mb-1" style="font-size: 0.9rem;">BRAC University</p>
+      
+      <!-- Contact Info with Icons (Email & Phone) -->
+      <p class="mb-1" style="font-size: 0.9rem;">
+        <a href="mailto:adit.pranto@gmail.com" class="text-dark"><i class="bx bx-mail-send"></i> adit.pranto@gmail.com</a>
+      </p>
+      <p style="font-size: 0.9rem;">
+        <a href="tel:+8801761443869" class="text-dark"><i class="bx bx-phone"></i>+8801761443869</a>
+      </p>
+  </div>
+</section>
+
+
+
 
 
 
