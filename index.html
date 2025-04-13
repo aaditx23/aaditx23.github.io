@@ -758,10 +758,11 @@
   
     // Automatically trigger modal if URL ends with /download
     window.addEventListener('DOMContentLoaded', () => {
-      if (window.location.pathname.endsWith("/download")) {
-        showCVModal();
-      }
-    });
+    if (window.location.hash === "#download") {
+      // Replace with your function to show the modal
+      document.getElementById("cvModal").style.display = "block";
+    }
+  });
   </script>
   
   
