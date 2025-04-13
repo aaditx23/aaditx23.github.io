@@ -721,19 +721,35 @@
   
     cvBtn.onclick = function(e) {
       e.preventDefault();
+  
+      // Show the modal
       cvModal.style.display = "block";
-    }
+  
+      // Hide mobile nav if active
+      const body = document.querySelector("body");
+      if (body.classList.contains("mobile-nav-active")) {
+        body.classList.remove("mobile-nav-active");
+  
+        // Toggle nav icon
+        const navbarToggle = document.querySelector(".mobile-nav-toggle");
+        if (navbarToggle) {
+          navbarToggle.classList.toggle("bi-list");
+          navbarToggle.classList.toggle("bi-x");
+        }
+      }
+    };
   
     cvClose.onclick = function() {
       cvModal.style.display = "none";
-    }
+    };
   
     window.onclick = function(event) {
       if (event.target == cvModal) {
         cvModal.style.display = "none";
       }
-    }
+    };
   </script>
+  
   
   
 
