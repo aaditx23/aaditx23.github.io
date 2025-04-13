@@ -719,36 +719,51 @@
     const cvBtn = document.getElementById("cvBtn");
     const cvClose = document.querySelector(".cv-close");
   
-    cvBtn.onclick = function(e) {
-      e.preventDefault();
+    // Show modal on CV button click
+    if (cvBtn) {
+      cvBtn.onclick = function(e) {
+        e.preventDefault();
+        showCVModal();
+      };
+    }
   
-      // Show the modal
+    // Close modal
+    cvClose.onclick = function() {
+      cvModal.style.display = "none";
+    };
+  
+    // Close when clicking outside the modal content
+    window.onclick = function(event) {
+      if (event.target == cvModal) {
+        cvModal.style.display = "none";
+      }
+    };
+  
+    // Function to open modal and hide mobile nav
+    function showCVModal() {
       cvModal.style.display = "block";
   
-      // Hide mobile nav if active
+      // Hide mobile nav if open
       const body = document.querySelector("body");
       if (body.classList.contains("mobile-nav-active")) {
         body.classList.remove("mobile-nav-active");
   
-        // Toggle nav icon
         const navbarToggle = document.querySelector(".mobile-nav-toggle");
         if (navbarToggle) {
           navbarToggle.classList.toggle("bi-list");
           navbarToggle.classList.toggle("bi-x");
         }
       }
-    };
+    }
   
-    cvClose.onclick = function() {
-      cvModal.style.display = "none";
-    };
-  
-    window.onclick = function(event) {
-      if (event.target == cvModal) {
-        cvModal.style.display = "none";
+    // Automatically trigger modal if URL ends with /download
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.pathname.endsWith("/download")) {
+        showCVModal();
       }
-    };
+    });
   </script>
+  
   
   
   
