@@ -707,22 +707,114 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <div id="cvModal" class="cv-modal">
-    <div class="cv-modal-content">
-      <span class="cv-close">&times;</span>
-      <h3>Select CV Type</h3>
-      <div class="cv-options" style="display: flex; justify-content: space-around; gap: 2rem; flex-wrap: wrap;">
-        <div class="cv-option" style="display: flex; flex-direction: column; align-items: center;">
-          <strong>Without Image</strong>
-          <a href="assets/Md__Amir_Ul_Islam_no_img.pdf" download="Md. Amir Ul Islam.pdf" class="download-btn">Download</a>
-        </div>
-        <div class="cv-option" style="display: flex; flex-direction: column; align-items: center;">
-          <strong>With Image</strong>
-          <a href="assets/Md__Amir_Ul_Islam_img.pdf" download="Md. Amir Ul Islam.pdf" class="download-btn">Download</a>
-        </div>
+<!-- Make sure Font Awesome CSS is included in your page head -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
+<div id="cvModal" class="cv-modal">
+  <div
+    class="cv-modal-content"
+    style="
+      width: max-content;
+      max-width: 90vw;
+      padding: 20px 30px;
+      margin: 40px auto;
+      box-sizing: border-box;
+      border-radius: 8px;
+      background: white;
+    "
+  >
+    <span
+      class="cv-close"
+      style="cursor: pointer; font-size: 24px; float: right;"
+      >&times;</span
+    >
+    <h3 style="text-align: center; margin-bottom: 1rem;">Select CV Type</h3>
+    <div
+      class="cv-options"
+      style="display: flex; flex-direction: column; gap: 2rem; font-family: Arial, sans-serif;"
+    >
+      <!-- App Developer -->
+      <div
+        class="cv-category"
+        style="min-width: 250px; border-bottom: 1px solid #ccc; padding-bottom: 1rem;"
+      >
+        <h4 style="text-align: center; margin-bottom: 0.75rem;">App Developer</h4>
+        <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 6px 0;
+              border-bottom: 1px solid #eee;
+            "
+          >
+            <span>With Image</span>
+            <a
+              href="assets/Md__Amir_Ul_Islam_app_img.pdf"
+              download="Md. Amir Ul Islam - App Dev With Image.pdf"
+              title="Download App Dev With Image CV"
+              style="color: #6a1b9a; font-size: 18px; text-decoration: none;"
+            >
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </li>
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 6px 0;
+            "
+          >
+            <span>Without Image</span>
+            <a
+              href="assets/Md__Amir_Ul_Islam_app_no_img.pdf"
+              download="Md. Amir Ul Islam - App Dev Without Image.pdf"
+              title="Download App Dev Without Image CV"
+              style="color: #6a1b9a; font-size: 18px; text-decoration: none;"
+            >
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SQA Engineer -->
+      <div
+        class="cv-category"
+        style="min-width: 250px; padding-top: 1rem;"
+      >
+        <h4 style="text-align: center; margin-bottom: 0.75rem;">SQA Engineer</h4>
+        <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 6px 0;
+            "
+          >
+            <span>Without Image</span>
+            <a
+              href="assets/Md__Amir_Ul_Islam_sqa_no_img.pdf"
+              download="Md. Amir Ul Islam - SQA With Image.pdf"
+              title="Download SQA With Image CV"
+              style="color: #6a1b9a; font-size: 18px; text-decoration: none;"
+            >
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+
+
   
 
   <script>
