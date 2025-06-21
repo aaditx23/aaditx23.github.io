@@ -850,6 +850,13 @@
     const cvBtn = document.getElementById("cvBtn");
     const cvClose = document.querySelector(".cv-close");
   
+  if (window.location.hash === "#download") {
+      const modal = document.getElementById("cvModal");
+      if (modal) {
+        modal.style.display = "block"; // or "flex", depending on your setup
+      }
+    }
+    
     // Show modal on CV button click
     if (cvBtn) {
       cvBtn.onclick = function(e) {
