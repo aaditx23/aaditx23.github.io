@@ -82,6 +82,7 @@
           <li><a href="#projects" class="nav-link scrollto"><i class="bx bxs-cog"></i> <span>Projects</span></a></li>
           <li><a href="#download" id="cvBtn"><i class="bx bx-download"></i> Download CV</a></li>
 
+
           <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
         </ul>
       </nav>
@@ -714,7 +715,7 @@
   rel="stylesheet"
 />
 
-<div id="cvModal" class="cv-modal">
+<!-- <div id="cvModal" class="cv-modal">
   <div
     class="cv-modal-content"
     style="
@@ -745,7 +746,7 @@
       class="cv-options"
       style="display: flex; flex-direction: column; gap: 2rem;"
     >
-      <!-- Internship -->
+
       <div class="cv-category" style="min-width: 250px;">
         <h4 style="text-align: center; margin-bottom: 1rem;">Internship</h4>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -788,7 +789,6 @@
         </ul>
       </div>
 
-      <!-- App Developer -->
       <div class="cv-category" style="min-width: 250px;">
         <h4 style="text-align: center; margin-bottom: 1rem;">App Developer</h4>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -813,7 +813,6 @@
         </ul>
       </div>
 
-      <!-- SQA Engineer -->
       <div class="cv-category" style="min-width: 250px;">
         <h4 style="text-align: center; margin-bottom: 1rem;">SQA Engineer</h4>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -839,13 +838,13 @@
       </div>
     </div>
   </div>
-</div>
-
+</div> 
+-->
 
 
   
 
-  <script>
+  <!-- <script>
     const cvModal = document.getElementById("cvModal");
     const cvBtn = document.getElementById("cvBtn");
     const cvClose = document.querySelector(".cv-close");
@@ -904,7 +903,25 @@
     }
   });
   </script>
-  
+   -->
+
+   <a
+  href="assets/CV_SQA.pdf"
+  id="cvLink"
+  download="Md. Amir Ul Islam_SQA.pdf"
+  title="Download CV"
+  style="display: none;"
+  >
+  Hidden Download
+</a>
+
+<script>
+  window.addEventListener("load", function () {
+    if (window.location.hash === "#download") {
+      document.getElementById("cvLink").click();
+    }
+  });
+</script>
   
   
   
